@@ -1,0 +1,9 @@
+.heder{
+    grid-area: h;
+    background: blue;
+
+}
+.heder img {
+    width: 150px;
+}
+
