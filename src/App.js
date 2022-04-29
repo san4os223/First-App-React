@@ -12,6 +12,6 @@ function App() {
             <Profile/>
         </div>
     );
-}
+}//commin1
 
 export default App;
