@@ -1,0 +1,14 @@
+.content {
+    grid-area: c;
+    background: green;
+}
+.item img{
+    width: 50px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    border-radius:25px;
+}
+.item{
+    font-size: medium;
+    color: yellow;
+}
