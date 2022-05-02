@@ -1,6 +1,29 @@
-.temD {
-    color: darkgray;
-}
+
 .dialogsContent {
     background: green;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+
+}
+.dialogsUser {
+    padding: 10px;
+}
+.dialog {
+
+}
+
+.messages {
+    padding: 10px;
+}
+
+.message {
+
+
+}
+
+.dialogsUser .active{
+    color: gold;
 }

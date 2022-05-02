@@ -5,14 +5,15 @@ function Nav (){
     return(
         <nav className={s.nav}>
 
-            <div className={s.item}>
-                <NavLink to={"/Profile"}> my profile </NavLink>
+            <div >
+
+                <NavLink to={"/Profile" }className = { navData => navData.isActive ? s.active : s.item } > my profile </NavLink>
             </div>
             <div className={`${s.item} ${s.active}`}>
-                <NavLink to = {"/Dialogs"}> message </NavLink>
+                <NavLink to = {"/Dialogs"} className = { navData => navData.isActive ? s.active : s.item }> message </NavLink>
             </div>
-            <div className={s.itemNews}>
-                <NavLink to = {"/News"}> News </NavLink>
+            <div className={s.item}>
+                <NavLink to = {"/News"} className = { navData => navData.isActive ? s.active : s.item }> News </NavLink>
             </div>
             <div className={s.item}>
                 <a>setings</a>

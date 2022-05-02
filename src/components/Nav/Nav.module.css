@@ -2,14 +2,21 @@
 .nav{
     grid-area: n;
     background: red;
+    padding: 10px;
 }
+
 
 .item {
-     color: aliceblue;
+    color: white ;
+    text-decoration: none;
 }
-.item.active {
-    color: yellow;
 
-
-
+.item a.active {color: gold;
+    text-decoration: none;
 }
+
+
+.active {color: gold;
+    text-decoration: none;
+}
+
