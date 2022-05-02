@@ -8,7 +8,7 @@ function MyPosts () {
                 My posts
             </div>
             <Post message = 'hi hello'/>
-            <Post message = 'its my first post'/>
+            <Post message = 'its my first post' likes = '20'/>
         </div>
 
     );

@@ -8,7 +8,10 @@
   grid-template-areas: "h h" "n c";
 
 }
-
+.app-waper-content{
+    grid-area: c;
+    background: blue;
+}
 
 
 
