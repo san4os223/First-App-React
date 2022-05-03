@@ -1,8 +1,13 @@
 .content {
-     grid-area: c;
-     background: green;
- }
-.item{
+    grid-area: c;
+    background: green;
+}
+
+.item {
     background: cornflowerblue;
-    text-align: center
+    text-align: right;
+    padding: 5px;
+}
+.buttontAddPost{
+    text-align: left;
 }

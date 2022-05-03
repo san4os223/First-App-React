@@ -2,6 +2,20 @@ import React from "react";
 import dialogStyll from './DIalogs.module.css';
 import {NavLink} from "react-router-dom";
 
+const DialogItem = (props) =>{
+   return ( <div className={dialogStyll.dialog + ' ' + dialogStyll.active}>
+        <NavLink  to={'/Dialogs/'+ props.id} >{props.name}</NavLink>
+    </div>
+   );
+}
+
+const Message = (props) =>{
+    return (
+        <div className={dialogStyll.message}> {props.message}</div>
+
+    );
+
+}
 
 const Dialogs = (props) => {
     return (
@@ -9,27 +23,18 @@ const Dialogs = (props) => {
             <div className={dialogStyll.dialogs}>
                 <div className={dialogStyll.dialogsUser}>
 
-                    <div className={dialogStyll.dialog + ' ' + dialogStyll.active}>
-                        <NavLink  to={'/Dialogs/1'} >1A</NavLink>
-                    </div>
-                    <div className={dialogStyll.dialog}>
-                        <NavLink  to={'/Dialogs/2'} > 2B</NavLink>
-                    </div>
-                    <div className={dialogStyll.dialog}>
-                        <NavLink  to={'/Dialogs/3'} > 3B</NavLink>
-                    </div>
-                    <div className={dialogStyll.dialog}>
-                        <NavLink  to={'/Dialogs/4'} >  4B</NavLink>
-                    </div>
-                    <div className={dialogStyll.dialog}>
-                        <NavLink  to={'/Dialogs/5'} > 5B </NavLink>
-                    </div>
+                    <DialogItem name = "1A" id = "1"/>
+                    <DialogItem name = "2b" id = "2"/>
+                    <DialogItem name = "3c" id = "3"/>
+                    <DialogItem name = "4v" id = "4"/>
+                    <DialogItem name = "5d" id = "5"/>
+                    <DialogItem name = "6e" id = "6"/>
 
                 </div>
                 <div className={dialogStyll.messages}>
-                    <div className={dialogStyll.message}> how are u</div>
-                    <div className={dialogStyll.message}> 1111111</div>
-                    <div className={dialogStyll.message}>22222</div>
+                  <Message message = "hello"/>
+                  <Message message = "first message"/>
+                  <Message message = "second message"/>
                 </div>
             </div>
         </div>
