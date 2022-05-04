@@ -10,7 +10,7 @@ function Nav (){
                 <NavLink to={"/Profile" }className = { navData => navData.isActive ? s.active : s.item } > my profile </NavLink>
             </div>
             <div className={`${s.item} ${s.active}`}>
-                <NavLink to = {"/Dialogs"} className = { navData => navData.isActive ? s.active : s.item }> message </NavLink>
+                <NavLink to = {"/DialogItem"} className = { navData => navData.isActive ? s.active : s.item }> message </NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to = {"/News"} className = { navData => navData.isActive ? s.active : s.item }> News </NavLink>

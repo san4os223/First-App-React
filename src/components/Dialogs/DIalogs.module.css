@@ -1,26 +1,31 @@
 
 .dialogsContent {
     background: green;
+
 }
 
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    color:  gold;
 
 }
 .dialogsUser {
     padding: 10px;
-}
-.dialog {
+    color: gold;
 
 }
+.dialog {
+ color: red;
+}
+
 
 .messages {
     padding: 10px;
 }
 
 .message {
-
+color: white;
 
 }
 

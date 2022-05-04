@@ -1,40 +1,63 @@
 import React from "react";
 import dialogStyll from './DIalogs.module.css';
 import {NavLink} from "react-router-dom";
+/*import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-const DialogItem = (props) =>{
-   return ( <div className={dialogStyll.dialog + ' ' + dialogStyll.active}>
-        <NavLink  to={'/Dialogs/'+ props.id} >{props.name}</NavLink>
-    </div>
-   );
+const DialogI = (props) =>{
+    return ( <div className={dialogStyll.dialog + ' ' + dialogStyll.active}>
+            <NavLink  to={'/DialogItem/'+ props.id} >{props.name}</NavLink>
+        </div>
+    );
 }
 
-const Message = (props) =>{
+const Messages = (props) =>{
     return (
         <div className={dialogStyll.message}> {props.message}</div>
 
     );
 
-}
-
+}*/
 const Dialogs = (props) => {
+
+  /*  let dialogData = [
+        {id : 1 , name: '1A' },
+        {id : 2 , name: '2A' },
+        {id : 3 , name: '3A' },
+        {id : 4 , name: '4A' },
+        {id : 5 , name: '5A' },
+        {id : 6 , name: '6A' }
+    ]
+    let messageData = [
+        {id: 1,name:'hello'},
+        {id: 2,name:'h'},
+        {id: 3,name:'ha'},
+        {id: 4,name:'hihi'},
+        {id: 5,name:'hyy'},
+        {id: 6,name:'YOOOOOO'}
+    ]
+
+
+
+    let dialogsElement = dialogData
+        .map( (dialog)=>{return (<DialogI name = {dialog.name} id = {dialog.id}/>
+        )} );
+
+    let messageElement = messageData
+        .map( (message)=>{return( <Messages message = {message.name}/>
+        )} )*/
+
+
     return (
         <div className={dialogStyll.dialogsContent}>
             <div className={dialogStyll.dialogs}>
                 <div className={dialogStyll.dialogsUser}>
 
-                    <DialogItem name = "1A" id = "1"/>
-                    <DialogItem name = "2b" id = "2"/>
-                    <DialogItem name = "3c" id = "3"/>
-                    <DialogItem name = "4v" id = "4"/>
-                    <DialogItem name = "5d" id = "5"/>
-                    <DialogItem name = "6e" id = "6"/>
+                   {/* {dialogsElement}*/}
 
                 </div>
                 <div className={dialogStyll.messages}>
-                  <Message message = "hello"/>
-                  <Message message = "first message"/>
-                  <Message message = "second message"/>
+                   {/* {messageElement}*/}
                 </div>
             </div>
         </div>
