@@ -1,26 +1,14 @@
 import React from "react";
 import dialogStyll from './DIalogs.module.css';
 import {NavLink} from "react-router-dom";
-/*import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message/Message";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Messages";
+import Messages from "./Message/Messages";
 
-const DialogI = (props) =>{
-    return ( <div className={dialogStyll.dialog + ' ' + dialogStyll.active}>
-            <NavLink  to={'/DialogItem/'+ props.id} >{props.name}</NavLink>
-        </div>
-    );
-}
 
-const Messages = (props) =>{
-    return (
-        <div className={dialogStyll.message}> {props.message}</div>
-
-    );
-
-}*/
 const Dialogs = (props) => {
 
-  /*  let dialogData = [
+    let dialogData = [
         {id : 1 , name: '1A' },
         {id : 2 , name: '2A' },
         {id : 3 , name: '3A' },
@@ -40,12 +28,12 @@ const Dialogs = (props) => {
 
 
     let dialogsElement = dialogData
-        .map( (dialog)=>{return (<DialogI name = {dialog.name} id = {dialog.id}/>
+        .map( (dialog)=>{return (<DialogItem name = {dialog.name} id = {dialog.id}/>
         )} );
 
     let messageElement = messageData
         .map( (message)=>{return( <Messages message = {message.name}/>
-        )} )*/
+        )} )
 
 
     return (
@@ -53,11 +41,11 @@ const Dialogs = (props) => {
             <div className={dialogStyll.dialogs}>
                 <div className={dialogStyll.dialogsUser}>
 
-                   {/* {dialogsElement}*/}
+                    {dialogsElement}
 
                 </div>
                 <div className={dialogStyll.messages}>
-                   {/* {messageElement}*/}
+                    {messageElement}
                 </div>
             </div>
         </div>

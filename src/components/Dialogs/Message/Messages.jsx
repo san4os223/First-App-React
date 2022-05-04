@@ -1,4 +1,3 @@
-/*
 
 import React from "react";
 import dialogStyll from './../DIalogs.module.css';
@@ -14,4 +13,4 @@ const Messages = (props) =>{
     );
 
 }
-export default Messages;*/
+export default Messages;
