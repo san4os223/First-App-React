@@ -9,6 +9,7 @@ import News from "./components/News/News";
 
 function App(props) {
 
+
     return (
         <BrowserRouter>
             <div className='app-wraper'>
@@ -20,7 +21,7 @@ function App(props) {
 
                       {/*  <Route path="/DialogsItem/*" element={<Dialogs messagesData={props.messagesData} dialogsData={props.dialogsData} />} />*/}
                          <Route path="/dialogs" element= {<Dialogs/>}/>
-                        <Route path="/profile" element={<Profile/>}/>
+                        <Route path="/profile"  element={<Profile postData = {props.postData}/>} />
                         <Route path="/news" element={<News/>}/>
                     </Routes>
 
