@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import state from "./Redux/State";
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let postData = [
-    {id: 1,name:'hi hello',likes:12},
-    {id: 2,name:'its my first post',likes:10},
-]
+
+
 
 root.render(
 
   <React.StrictMode>
 
-    <App postData = {postData} />
+    <App appState = {state}  />
   </React.StrictMode>
 );
 
