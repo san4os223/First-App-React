@@ -19,6 +19,7 @@ const Dialogs = (props) => {
 
     return (
         <div className={dialogStyll.dialogsContent}>
+            <div className={dialogStyll.headerMessage}>  My message </div>
             <div className={dialogStyll.dialogs}>
                 <div className={dialogStyll.dialogsUser}>
 

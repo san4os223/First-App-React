@@ -9,11 +9,16 @@
     grid-template-columns: 2fr 10fr;
     color:  gold;
 
+
+
 }
 .dialogsUser {
-    padding: 10px;
+    padding: 0px;
     color: gold;
 
+}
+.userContent{
+    padding: 10px;
 }
 .dialog {
  color: red;
@@ -26,9 +31,22 @@
 
 .message {
 color: white;
+text-align: right;
 
 }
 
 .dialogsUser .active{
     color: gold;
+}
+
+.item img{
+    width: 40px;
+    border-radius:75px;
+
+}
+.headerMessage{
+ text-align: center;
+    background: gold;
+    color: red;
+
 }

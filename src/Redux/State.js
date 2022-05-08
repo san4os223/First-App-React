@@ -13,12 +13,12 @@ let state = {
 
     dialogPage:{
         dialogData:[
-            {id : 1 , name: '1A' },
-            {id : 2 , name: '2A' },
-            {id : 3 , name: '3A' },
-            {id : 4 , name: '4A' },
-            {id : 5 , name: '5A' },
-            {id : 6 , name: '6A' }
+            {id : 1 , name: '1Aааааааа' },
+            {id : 2 , name: '2Aааааааа' },
+            {id : 3 , name: '3Aааааааа' },
+            {id : 4 , name: '4Aааааааа' },
+            {id : 5 , name: '5Aаааааааа' },
+            {id : 6 , name: '6Aаааааааа' }
         ],
         messageData:[
             {id: 1,name:'hello'},
