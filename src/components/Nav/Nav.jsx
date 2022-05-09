@@ -18,6 +18,7 @@ function Nav (){
             <div className={s.item}>
                 <a>setings</a>
             </div>
+            <br/>
             <div className={s.item}>
                 <NavLink to = {"/Friends"} className = { navData => navData.isActive ? s.active : s.item }> Friends </NavLink>
             </div>

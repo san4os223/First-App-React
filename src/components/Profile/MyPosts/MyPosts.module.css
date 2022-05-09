@@ -5,9 +5,8 @@
 
 .item {
     background: cornflowerblue;
-    text-align: right;
+    text-align: center;
     padding: 5px;
+
 }
-.buttontAddPost{
-    text-align: left;
-}
+

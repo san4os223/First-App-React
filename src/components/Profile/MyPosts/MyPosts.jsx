@@ -15,7 +15,9 @@ function MyPosts (props) {
     return (<div className={posts.content}>
             <div className={posts.item}>
                 <div>
-                    <div> My posts <button className={posts.buttontAddPost}>add post</button></div>
+                    <div > All posts <button >Add post <input/> </button>
+
+                    </div>
                 </div>
             </div>
             {posts1}
