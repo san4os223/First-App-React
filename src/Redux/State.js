@@ -1,4 +1,7 @@
-
+import post from "../components/Profile/MyPosts/Posts/Post";
+import NewsPosts from "../components/News/NewsPosts/NewsPosts";
+import {createRenderer} from "react-dom/test-utils";
+import {rerenderTree} from "../render";
 
 
 
@@ -31,4 +34,17 @@ let state = {
     }
 
 }
+ export let addPost = (postMessage) => {
+    let newPost = {
+        id:8,
+        name:postMessage,
+        likesCount: 2
+    };
+    state.profilePage.postData.push(newPost);
+     rerenderTree(state);
+
+}
+
+
+
 export default state;

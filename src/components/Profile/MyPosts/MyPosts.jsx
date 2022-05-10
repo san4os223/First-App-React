@@ -3,19 +3,24 @@ import posts from './MyPosts.module.css';
 import Post from "./Posts/Post";
 
 function MyPosts (props) {
-    // let postData = [
-    //     {id: 1,name:'hi hello',likes:12},
-    //     {id: 2,name:'its my first post',likes:10},
-    //
-    // ]
+
+
     let posts1 = props.postData.map( (p ) => {
         return( <Post message = {p.name} likes = {p.likes}/>)
     } )
 
+let newPostsElement = React.createRef();
+    let addPosts = () => {
+
+        let text = newPostsElement.current.value;
+        props.addPost(text);
+    }
+
     return (<div className={posts.content}>
             <div className={posts.item}>
                 <div>
-                    <div > All posts <button >Add post <input/> </button>
+                    <textarea ref={newPostsElement}></textarea>
+                    <div > All posts <button onClick={addPosts} > Add post  </button>
 
                     </div>
                 </div>
