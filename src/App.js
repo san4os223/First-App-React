@@ -6,6 +6,7 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from "./components/News/News";
+import {uppdateNewPostText} from "./Redux/State";
 
 function App(props) {
 
@@ -27,6 +28,8 @@ function App(props) {
 
                         <Route path="/profile"  element={<Profile postData = {props.appState.profilePage.postData}
                                                                   addPost={props.addPost}
+                                                                  newPostText = {props.appState.profilePage.newPostText}
+                                                                  uppdateNewPostText = {props.uppdateNewPostText}
                         />}/>
                         <Route path="/news" element={<News/>}/>
                     </Routes>

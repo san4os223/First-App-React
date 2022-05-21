@@ -12,6 +12,7 @@ let state = {
             {id: 1,name:'hi hello',likes:12},
             {id: 2,name:'its my first post',likes:10},
         ],
+        newPostText: "fdsfdsfsdfds",
     },
 
     dialogPage:{
@@ -34,17 +35,23 @@ let state = {
     }
 
 }
- export let addPost = (postMessage) => {
+ export let addPost = () => {
     let newPost = {
         id:8,
-        name:postMessage,
+        name:state.profilePage.newPostText,
         likesCount: 2
     };
     state.profilePage.postData.push(newPost);
+   state.profilePage.newPostText = '';
      rerenderTree(state);
 
 }
 
+export let uppdateNewPostText= (newText) => {
 
+    state.profilePage.newPostText = newText;
+    rerenderTree(state);
+
+}
 
 export default state;
