@@ -1,7 +1,6 @@
-import post from "../components/Profile/MyPosts/Posts/Post";
-import NewsPosts from "../components/News/NewsPosts/NewsPosts";
-import {createRenderer} from "react-dom/test-utils";
-import {rerenderTree} from "../render";
+let rerenderTree = () => {
+    console.log('statechange');
+}
 
 
 
@@ -35,7 +34,7 @@ let state = {
     }
 
 }
- export let addPost = () => {
+ export const addPost = () => {
     let newPost = {
         id:8,
         name:state.profilePage.newPostText,
@@ -47,11 +46,13 @@ let state = {
 
 }
 
-export let uppdateNewPostText= (newText) => {
+export const uppdateNewPostText= (newText) => {
 
     state.profilePage.newPostText = newText;
     rerenderTree(state);
 
 }
-
+export const subscribe = (observer) => {
+    rerenderTree = observer; //patern
+}
 export default state;
