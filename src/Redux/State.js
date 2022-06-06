@@ -35,25 +35,29 @@ let store = {
     _collSubscribe ()  {
         console.log('statechange');
     },
-    addPost ()  {
-        let newPost = {
-            id:8,
-            name:this._state.profilePage.newPostText,
-            likesCount: 2
-        };
-        this._state.profilePage.postData.push(newPost);
-        this._state.profilePage.newPostText = '';
-        this._collSubscribe(this._state);
 
-    },
-   uppdateNewPostText(newText) {
-
-       this._state.profilePage.newPostText = newText;
-       this._collSubscribe(this._state);
-
-    },
     subscribe (observer)  {
       this._collSubscribe = observer; //patern
+    },
+
+    dispatch(action){
+
+        if (action.type === 'ADD-POST'){
+            let newPost = {
+                id:8,
+                name:this._state.profilePage.newPostText,
+                likesCount: 2
+            };
+            this._state.profilePage.postData.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._collSubscribe(this._state);
+
+        }else if (action.type === 'UPDATE-NEW-POST-TEXT'){
+            this._state.profilePage.newPostText = action.newText;
+            this._collSubscribe(this._state);
+
+        }
+
     }
 }
 

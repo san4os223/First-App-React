@@ -27,9 +27,9 @@ function App(props) {
                          />
 
                         <Route path="/profile"  element={<Profile postData = {props.appState.profilePage.postData}
-                                                                  addPost={props.addPost}
-                                                                  newPostText = {props.appState.profilePage.newPostText}
-                                                                  uppdateNewPostText = {props.uppdateNewPostText}
+                                                                  dispatch={props.dispatch}
+                                                                 newPostText = {props.appState.profilePage.newPostText}
+
                         />}/>
                         <Route path="/news" element={<News/>}/>
                     </Routes>
