@@ -22,8 +22,9 @@ function App(props) {
 
 
                          <Route path="/dialogs" element= {<Dialogs
-                             messageData = {props.appState.dialogPage.messageData}
-                             dialogData = {props.appState.dialogPage.dialogData}  />}
+                             /*messageData = {props.appState.dialogPage.messageData}*/
+                             store ={props.store}
+                           /* dialogData = {props.appState.dialogPage.dialogData} */ />}
                          />
 
                         <Route path="/profile"  element={<Profile postData = {props.appState.profilePage.postData}
