@@ -6,7 +6,7 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from "./components/News/News";
-import {uppdateNewPostText} from "./Redux/State";
+import {uppdateNewPostText} from "./Redux/store";
 
 function App(props) {
 
@@ -22,9 +22,9 @@ function App(props) {
 
 
                          <Route path="/dialogs" element= {<Dialogs
-                             /*messageData = {props.appState.dialogPage.messageData}*/
+
                              store ={props.store}
-                           /* dialogData = {props.appState.dialogPage.dialogData} */ />}
+                            />}
                          />
 
                         <Route path="/profile"  element={<Profile postData = {props.appState.profilePage.postData}

@@ -1,19 +1,17 @@
 import React from "react";
 import dialogStyll from './DIalogs.module.css';
-import {NavLink} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message/Messages";
 import Messages from "./Message/Messages";
-import {messageActionCreator, updateMessageTextActionCreate} from "../../Redux/State";
+import {messageActionCreator, updateMessageTextActionCreate} from "../../Redux/Reducer/Dialogs-reducer";
 
 
 const Dialogs = (props) => {
 
     let state = props.store.getState().dialogPage;
 
-    let dialogsElement = state.dialogData.map((dialog) => {return (<DialogItem name={dialog.name} id={dialog.id}/>)});
+    let dialogsElement = state.dialogData.map(dialog => {return (<DialogItem name={dialog.name} id={dialog.id}/>)});
 
-    let messageElement = state.messageData.map((message) => {return (<Messages message={message.name}/>)})
+    let messageElement = state.messageData.map(message => {return (<Messages message={message.name}/>)})
 
     let newMessageBody = state.newMessageBody;
 
