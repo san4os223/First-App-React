@@ -7,6 +7,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from "./components/News/News";
 import {uppdateNewPostText} from "./Redux/store";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 function App(props) {
 
@@ -21,15 +22,13 @@ function App(props) {
                     <Routes>
 
 
-                         <Route path="/dialogs" element= {<Dialogs
+                         <Route path="/dialogs" element= {<DialogsContainer
 
                              store ={props.store}
                             />}
                          />
 
-                        <Route path="/profile"  element={<Profile postData = {props.appState.profilePage.postData}
-                                                                  dispatch={props.dispatch}
-                                                                 newPostText = {props.appState.profilePage.newPostText}
+                        <Route path="/profile"  element={<Profile store={props.store}
 
                         />}/>
                         <Route path="/news" element={<News/>}/>
