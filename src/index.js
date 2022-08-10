@@ -1,11 +1,10 @@
 
-import reportWebVitals from './reportWebVitals';
 import store from "./Redux/Redux_store";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
+import {Provider} from "react-redux";
 
 
 
@@ -15,9 +14,9 @@ let rerenderTree = (state) => {
 
     root.render(
         <React.StrictMode>
-
-            <App appState={state} dispatch={store.dispatch.bind(store)} store = {store}
-               />
+         <Provider store={store}>
+            <App/>
+         </Provider>
         </React.StrictMode>
     );
 }

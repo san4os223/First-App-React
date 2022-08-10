@@ -22,15 +22,8 @@ function App(props) {
                     <Routes>
 
 
-                         <Route path="/dialogs" element= {<DialogsContainer
-
-                             store ={props.store}
-                            />}
-                         />
-
-                        <Route path="/profile"  element={<Profile store={props.store}
-
-                        />}/>
+                         <Route path="/dialogs" element= {<DialogsContainer/>}/>
+                        <Route path="/profile"  element={<Profile/>}/>
                         <Route path="/news" element={<News/>}/>
                     </Routes>
 
