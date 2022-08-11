@@ -9,7 +9,7 @@ let store = configureStore({
         dialogPage: dialogsReducer,
 
     }});
-
+window.store = store;
 // let  = combineReducers({
 //     profileReducer,
 //     dialogsReducer,
