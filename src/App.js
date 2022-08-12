@@ -8,6 +8,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import News from "./components/News/News";
 import {uppdateNewPostText} from "./Redux/store";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import Users from "./components/Users/Users";
+import UsersContainer from "./components/Users/UsersContainer";
 
 function App(props) {
 
@@ -25,6 +27,7 @@ function App(props) {
                          <Route path="/dialogs" element= {<DialogsContainer/>}/>
                         <Route path="/profile"  element={<Profile/>}/>
                         <Route path="/news" element={<News/>}/>
+                        <Route path="/users"  element={<UsersContainer/>}/>
                     </Routes>
 
                 </div>
