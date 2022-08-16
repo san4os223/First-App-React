@@ -4,15 +4,12 @@ import * as axios from "axios"
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
-        alert("new");
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+componentDidMount() {
+    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
 
-            this.props.setUsers(response.data.items);
-        });
-    }
-
+        this.props.setUsers(response.data.items);
+    });
+}
 
     render() {
         return <div>
@@ -20,9 +17,9 @@ class Users extends React.Component {
             {
                 this.props.users.map(u => <div key={u.id}>
                 <span><div>
-                    {/*<img*/}
-                    {/*    src={u.photos.small != null ? u.photos.small : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yjqw5tzypfIAlOvMgrt8047s9uiuxqX9yw&usqp=CAU"}*/}
-                    {/*    className={styles.usersPhoto}/>*/}
+                    <img
+                        src={u.photos.small != null ? u.photos.small : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yjqw5tzypfIAlOvMgrt8047s9uiuxqX9yw&usqp=CAU"}
+                        className={styles.usersPhoto}/>
                 </div>
                     <div>
                         {u.follwed
