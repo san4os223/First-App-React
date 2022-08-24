@@ -20,14 +20,14 @@ let Users = (props) => {
 
         </div>
         {
-           props.users.map(u => <div key={u.id}>
+           props.users.map(u => <div key={u.toString()}>
                 <span><div>
                      <div>
                     <img src={u.photoUrl} alt={''} className={styles.usersPhoto}/>
                 </div>
                 </div>
                     <div>
-                        {u.follwed
+                        {u.follow
                             ? <button onClick={() => props.unfollow(u.id)}>Unfollow</button>
                             : <button onClick={() => props.follow(u.id)}>Follow</button>}
 
